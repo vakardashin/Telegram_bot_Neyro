@@ -11,6 +11,7 @@ start_kb = ReplyKeyboardMarkup(
         {
             KeyboardButton(text="Варианты доставки"),
             KeyboardButton(text="Варианты оплаты"),
+            KeyboardButton(text="Покажи лису"),
         }
     ],
     resize_keyboard=True,
@@ -26,6 +27,7 @@ start_kb2.add(
     KeyboardButton(text="О магазине"),
     KeyboardButton(text="Варианты доставки"),
     KeyboardButton(text="Варианты оплаты"),
+    KeyboardButton(text="Покажи лису"),
 )
 start_kb2.adjust(2, 2)
 

@@ -7,6 +7,8 @@ from aiogram.utils.formatting import as_list, as_marked_section, Bold #Italic, a
 from filters.chat_types import ChatTypeFilter
 
 from kbds import reply
+import random
+from utils.random_fox import fox
 
 user_private_router = Router()
 user_private_router.message.filter(ChatTypeFilter(["private"]))
@@ -81,4 +83,9 @@ async def get_location(message: types.Message):
     await message.answer(f"локация получена")
     await message.answer(str(message.location))
 
-    
+@user_private_router.message(F.text.lower() == 'покажи лису')
+async def info(message: types.Message):
+    img_fox = fox()
+    await message.answer('Привет, лови лису')
+    await message.answer_photo(img_fox)
+
