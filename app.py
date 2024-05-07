@@ -29,3 +29,4 @@ async def main():
     await dp.start_polling(bot, allowed_updates=ALLOWED_UPDATES)
 
 asyncio.run(main())
+
